@@ -184,8 +184,8 @@ function formSubmit() {
         delay: 3000
     });
     validToast.show(); // Activate Valid Toast (Success Message)
-    surveyForm.reset(); // Reset Form
-    surveyForm.classList.remove("was-validated"); // Remove Bootstrap Validation CSS
+    foodChoiceForm.reset(); // Reset Form
+    foodChoiceForm.classList.remove("was-validated"); // Remove Bootstrap Validation CSS
     document.getElementById("tableContainer").scrollIntoView(); // Move to Table
 };
 
