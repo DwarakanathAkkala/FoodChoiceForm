@@ -1,0 +1,48 @@
+/* Backgrounds */
+body {
+    background-color: #222831;
+}
+
+.card {
+    margin: 5%;
+    background-color: #393E46;
+}
+
+p, label {
+    color: #EEEEEE;
+}
+
+table {
+    background-color: white;
+}
+
+/* Headings */
+h1 {
+    color: #00ADB5;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Fascinate', cursive;
+}
+
+/* Validations */
+.invalid-feedback{
+    color: #00ADB5;
+}
+
+.was-validated .form-check-input:valid~.form-check-label {
+    color: #00ADB5;
+}
+
+/* Table CSS */
+#tableContainer {
+    display: none;
+}
+
+tbody tr {
+    background-color: #769FCD;
+}
+
+tr:nth-child(even) {
+    background-color: #B9D7EA;
+}
+
