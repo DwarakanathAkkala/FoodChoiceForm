@@ -156,13 +156,13 @@ document.body.append(container);
 
 function formSubmit() {
     // Target Form Element
-    const surveyForm = document.getElementById("form");
+    const foodChoiceForm = document.getElementById("form");
 
     // Activate Bootstrap Validations
-    surveyForm.classList.add("was-validated");
+    foodChoiceForm.classList.add("was-validated");
 
     // Check for invalid form Values
-    if(!document.getElementById("form").checkValidity()){
+    if(!foodChoiceForm.checkValidity()){
         var invalidElement = document.getElementById("invalidToast");
         var invalidToast = new bootstrap.Toast(invalidElement, {
             delay: 3000
@@ -172,7 +172,7 @@ function formSubmit() {
     }
 
     // Get Survey Form Input Data    
-    const formData = new FormData (surveyForm);
+    const formData = new FormData (foodChoiceForm);
     const formDataObj = Object.fromEntries(formData.entries()); 
     formDataObj.foodChoice = formData.getAll('foodChoice'); // Get all values of Checkbox Inputs
 
