@@ -76,6 +76,7 @@ container.innerHTML = `
                             <input class="form-check-input" type="checkbox" name="foodChoice" value="protein" id="protein">
                             <label class="form-check-label" for="protein">Protein Foods</label>
                         </div>
+                        <div id="checkboxOptions" class="invalid-checkbox">Please Select atleast two options</div>
                     </div>
 
                     <div class="col-md-5">
@@ -161,32 +162,47 @@ function formSubmit() {
     // Activate Bootstrap Validations
     foodChoiceForm.classList.add("was-validated");
 
-    // Check for invalid form Values
-    if(!foodChoiceForm.checkValidity()){
-        var invalidElement = document.getElementById("invalidToast");
-        var invalidToast = new bootstrap.Toast(invalidElement, {
-            delay: 3000
-        });
-        invalidToast.show(); // Activate Invalid Toast (Error Message)
-        return;
-    }
+    // Create Bootstrap Toast Trigger
+    var invalidElement = document.getElementById("invalidToast");
+    var invalidToast = new bootstrap.Toast(invalidElement, {
+        delay: 3000
+    });
 
     // Get Survey Form Input Data    
     const formData = new FormData (foodChoiceForm);
     const formDataObj = Object.fromEntries(formData.entries()); 
     formDataObj.foodChoice = formData.getAll('foodChoice'); // Get all values of Checkbox Inputs
 
-    document.getElementById("tableContainer").style.display= "block";
+    console.log("Len", formData.getAll('foodChoice').length);
 
-    addData(formDataObj); // Add Form data to Table
-    var validElement = document.getElementById("validToast");
-    var validToast = new bootstrap.Toast(validElement, {
-        delay: 3000
-    });
-    validToast.show(); // Activate Valid Toast (Success Message)
-    foodChoiceForm.reset(); // Reset Form
-    foodChoiceForm.classList.remove("was-validated"); // Remove Bootstrap Validation CSS
-    document.getElementById("tableContainer").scrollIntoView(); // Move to Table
+    // Check for invalid form Values
+    if(formData.getAll('foodChoice').length < 2) {
+        document.getElementById("checkboxOptions").style.display = "block";
+        invalidToast.show(); // Activate Invalid Toast (Error Message)
+        return;
+    }
+
+    else if(!foodChoiceForm.checkValidity()){
+        document.getElementById("checkboxOptions").style.display = "none";
+        invalidToast.show(); // Activate Invalid Toast (Error Message)
+        return;
+    }
+
+    // Success Scenario
+    else {
+        document.getElementById("tableContainer").style.display = "block";
+    
+        addData(formDataObj); // Add Form data to Table
+        var validElement = document.getElementById("validToast");
+        var validToast = new bootstrap.Toast(validElement, {
+            delay: 3000
+        });
+        validToast.show(); // Activate Valid Toast (Success Message)
+        foodChoiceForm.reset(); // Reset Form
+        foodChoiceForm.classList.remove("was-validated"); // Remove Bootstrap Validation CSS
+        document.getElementById("checkboxOptions").style.display = "none"; // Remove Checkbox Validation
+        document.getElementById("tableContainer").scrollIntoView(); // Move to Table
+    }
 };
 
 var surveyEntries = document.getElementById("surveyEntries");

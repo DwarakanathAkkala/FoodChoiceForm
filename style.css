@@ -29,8 +29,13 @@ h1 {
     color: #00ADB5;
 }
 
-.was-validated .form-check-input:valid~.form-check-label {
+.invalid-checkbox {
     color: #00ADB5;
+    display: none;
+}
+
+.was-validated .form-check-input:valid~.form-check-label {
+    color: white;
 }
 
 /* Table CSS */
