@@ -48,7 +48,7 @@ container.innerHTML = `
 
                     <div class="col-md-2 form-group">
                         <label for="pincode" class="mb-2">Pincode</label>
-                        <input id="pincode" class="form-control" name="pincode" type="text" placeholder="Enter Pincode" required>
+                        <input id="pincode" class="form-control" name="pincode" type="number" placeholder="Enter Pincode" required>
                         <div class="invalid-feedback">Please Enter valid Pincode</div>
                     </div>
                 </div>
