@@ -8,7 +8,7 @@ container.innerHTML = `
     <div class="card">
         <div class="card-body">
             <form id="form" class="mb-4 row" novalidate>
-                <h1>Food Choice Form</h1>
+                <h1 class="form-header">Food Choice Form</h1>
                 <div class="mb-3 row">
                     <div class="col-md-6 form-group">
                         <label for="first-name" class="mb-2">First Name</label>
