@@ -1,15 +1,20 @@
+@font-face {
+    font-family: headerFont;
+    src: url(ChakraPetch-Regular.ttf);
+}
+
 /* Backgrounds */
 body {
-    background-color: #222831;
+    background-color: #364F6B;
 }
 
 .card {
     margin: 5%;
-    background-color: #393E46;
+    background-color: #3FC1C9;
 }
 
 p, label {
-    color: #EEEEEE;
+    color: #F5F5F5;
 }
 
 table {
@@ -18,11 +23,17 @@ table {
 
 /* Headings */
 h1 {
-    color: #00ADB5;
+    color: #FC5185;
     text-align: center;
     margin-top: 10%;
     margin-bottom: 30px;
-    font-family: 'Fascinate', cursive;
+    font-family: headerFont;
+}
+
+.form-header{color: white;}
+
+button {
+    background-color: #FC5185 !important;
 }
 
 /* Validations */
@@ -42,7 +53,7 @@ h1 {
 /* Table CSS */
 #tableContainer {
     display: none;
-    margin: 0 5% 10% 5%;
+    margin: 0 10% 5% 5%;
 }
 
 tbody tr {
@@ -52,3 +63,4 @@ tbody tr {
 tr:nth-child(even) {
     background-color: #B9D7EA;
 }
+
