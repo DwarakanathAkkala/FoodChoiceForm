@@ -42,7 +42,7 @@ h1 {
 /* Table CSS */
 #tableContainer {
     display: none;
-    margin-bottom: 10%;
+    margin: 0 5% 10% 5%;
 }
 
 tbody tr {
@@ -52,4 +52,3 @@ tbody tr {
 tr:nth-child(even) {
     background-color: #B9D7EA;
 }
-
