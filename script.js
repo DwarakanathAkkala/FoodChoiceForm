@@ -102,8 +102,8 @@ container.innerHTML = `
         </div>
     </div>
 
-    <div class="table-responsive-sm" id="tableContainer">
-        <h1>Survey Data</h1>
+    <h1>Survey Data</h1>
+    <div class="table-responsive-lg" id="tableContainer">
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -124,7 +124,7 @@ container.innerHTML = `
     </div>
 
     <!--Invalid Toast-->
-    <div class="position-fixed bottom-0 end-0 p-5" style="z-index: 11">
+    <div class="toast-container position-fixed bottom-0 end-0" style="z-index: 11">
       <div id="invalidToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
           <strong class="me-auto">Oops :-(</strong>
@@ -138,7 +138,7 @@ container.innerHTML = `
 
 
     <!--Valid Toast-->
-    <div class="position-fixed top-50 end-0 translate-middle-y p-5" style="z-index: 11">
+    <div class="toast-container position-fixed top-50 end-0" style="z-index: 11">
       <div id="validToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
           <strong class="me-auto">Hurray :-)</strong>
