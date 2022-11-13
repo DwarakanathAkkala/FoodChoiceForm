@@ -38,16 +38,16 @@ button {
 
 /* Validations */
 .invalid-feedback{
-    color: #00ADB5;
+    color: black;
 }
 
 .invalid-checkbox {
-    color: #00ADB5;
+    color: black;
     display: none;
 }
 
 .was-validated .form-check-input:valid~.form-check-label {
-    color: white;
+    color: black;
 }
 
 /* Table CSS */
