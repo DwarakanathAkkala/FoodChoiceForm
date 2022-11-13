@@ -46,7 +46,11 @@ button {
     display: none;
 }
 
-.was-validated .form-check-input:valid~.form-check-label {
+.form-check-input:valid~.form-check-label{
+    color: white !important;
+}
+
+.was-validated  {
     color: black;
 }
 
@@ -62,5 +66,17 @@ tbody tr {
 
 tr:nth-child(even) {
     background-color: #B9D7EA;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
